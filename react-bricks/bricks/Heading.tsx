@@ -18,27 +18,29 @@ interface HeroUnitProps {
 //=============================
 const Heading: types.Brick<HeroUnitProps> = ({ padding, size }) => {
   return (
-    <div
-      className={`max-w-xl mx-auto px-6 ${
-        padding === "big" ? "py-20" : "py-12"
-      }`}
-    >
-      <div>
-        <Text
-          renderBlock={(props) => (
-            <h1
-              className={`text-3xl ${
-                size === "large" ? "sm:text-5xl" : "sm:text-4xl"
-              } text-center font-black text-gray-800 dark:text-white leading-tight mb-3`}
-            >
-              {props.children}
-            </h1>
-          )}
-          placeholder="Type a title..."
-          propName="title"
-        />
+    <section className={`bg-white dark:bg-gray-900 overflow-hidden`}>
+      <div
+        className={`max-w-xl mx-auto px-6 ${
+          padding === "big" ? "py-20" : "py-12"
+        }`}
+      >
+        <div>
+          <Text
+            renderBlock={(props) => (
+              <h1
+                className={`text-3xl ${
+                  size === "large" ? "sm:text-5xl" : "sm:text-4xl"
+                } text-center font-black text-gray-800 dark:text-white leading-tight mb-3`}
+              >
+                {props.children}
+              </h1>
+            )}
+            placeholder="Type a title..."
+            propName="title"
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
